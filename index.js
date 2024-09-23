@@ -1,13 +1,47 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-//import reportWebVitals from "./reportWebVitals";
+import Header from "../Navbar/Header";
+import Welcome from "../Landingpagecomponents/Welcome";
+import Learnmore from "../Landingpagecomponents/Learnmore";
+import Choose from "../Landingpagecomponents/Choose";
+import Choice from "../Landingpagecomponents/Choose";
+import Howitworks from "../Landingpagecomponents/Howitworks";
+import Ourpartners from "../Landingpagecomponents/Ourpartners";
+import Ourpartners1 from "../Landingpagecomponents/Ourpartners";
+import Cardsection from "../Landingpagecomponents/Cardsection";
+import Contactpage from "../Landingpagecomponents/Contactpage";
+import Footer from "../Landingpagecomponents/Footer";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+const Main = () => {
+  return (
+    <div className="">
+      <div className="">
+        <Header />
+        <div className="">
+          {" "}
+          <Welcome />
+        </div>
+        <div>
+          <Learnmore />
+        </div>
+        <div className="w-full">
+          <Howitworks />
+          <div className="">
+            <Choice />
+          </div>
+        </div>
+        <div>
+          <Cardsection />
+        </div>
+        <div className="hidden lg:block">
+          {" "}
+          <Contactpage />
+        </div>{" "}
+      </div>
+      <div className="mx-4">
+        <Footer />
+      </div>
+    </div>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals();
+export default Main;
